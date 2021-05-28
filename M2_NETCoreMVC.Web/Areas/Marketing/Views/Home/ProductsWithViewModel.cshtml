@@ -1,0 +1,48 @@
+﻿<!--Para que pueda indentificar a la carpeta Models-->
+@using M2_NETCoreMVC.Web.Areas.Marketing.Models;
+<!--como se recibe la vista-->
+@model List<Product>
+
+<h1>Products with ViewModel</h1>
+
+
+<table id="tbProducts" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Title</th>
+            <th>Maker</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!--doble tab para que te aparesca su sintaxis-->
+        <!--la coleecion es el listado que voy a recibir,con Model le voy a decir que estoy recibiendo ese modelo-->
+        @foreach (var item in Model)
+        {
+        <tr>
+            <!--aca vamos poniendo cada uno de los valores de cada objeto-->
+            <!--Mostrando el ID-->
+            <td>@item.Id</td>
+
+            <td>@item.Description</td>
+
+            <td>
+                <!--Cuando presionen ese href sera el Url-->
+                <a href="@item.Url" target="_blank">@item.Title</a>
+            </td>
+
+            <td>
+                <img src="@item.Img" style="height:40px;width:40px"/>
+            </td>
+            <td></td>
+        </tr>
+
+
+        }
+
+    </tbody>
+</table>
+

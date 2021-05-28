@@ -1,0 +1,18 @@
+﻿<h1>Iniciar Sesion</h1>
+
+<!--Cual va a ser el action que va a recibir estos valores-->
+<!--El get no es enviara toda la informacion osea el formulario y cuando enviemos recibiremos estos valores por POST-->
+<form method="post" action="/Seguridad/Login">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <!--el atributo necesario sera el name,el cual recibira el controlador-->
+        <input type="email" class="form-control" name="email" id="txtEmail" aria-describedby="emailHelp">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
